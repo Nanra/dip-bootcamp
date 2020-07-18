@@ -2,40 +2,20 @@ public class MainApplication {
 
     public static void main(String[] args) {
 
-        // Variables Declaration
-//        Scanner inputScanner = new Scanner(System.in);
-//        int visitorCounter = 10;
-//        System.out.print("Please enter your name: ");
-//        String visitorName = inputScanner.nextLine();
-//        String greetingsText = "Hello " + visitorName + ", You are the number " + visitorCounter + " visitor of Our Store";
-//
-//        // Running Program
-//        System.out.println(greetingsText);
+        // Instance Object
+        TextConverter changeText = new TextConverter();
 
-        // Text Output Converter Example
-//        TextConverter changeText = new TextConverter();
-//        changeText.yourText = "name";
+        // Set Value Variable Attribute
+        changeText.setYourText("Hi, I'm A Java Programmer");
 
-//        changeText.setYourText("name");
+        // Get Value Variable Attribute
+        String yourInputText = changeText.getYourText();
 
-//        System.out.println(changeText.getYourText());
-//        System.out.println(changeText.textToUpperCase());
+        // Call Method Text Convert
+        String yourTextConverted = changeText.textToUpperCase();
 
-        // User Input Example
-        InputReader userInput = new InputReader();
-        PrintOutput userOutput = new PrintOutput();
-
-        // Read String User Name
-        System.out.print("Insert Your Name: ");
-        String userName = userInput.readText();
-
-        // Read Integer User age
-        System.out.print("Insert Your Age: ");
-        int userAge = userInput.readNumber();
-
-        // Print User Information
-        userOutput.printString(userName);
-        userOutput.printNumber(userAge);
-
+        // Print Output Information
+        System.out.println("Text Before Convert: " + yourInputText);
+        System.out.println("Text After Convert: " + yourTextConverted);
     }
 }
