@@ -1,3 +1,5 @@
+package io;
+
 public class PrintOutput {
 
     public void printString(String inputText) {
