@@ -4,8 +4,8 @@ public class TextConverter {
     private String yourText;
 
     // Setter Attribute
-    public String setYourText(String inputText){
-        return this.yourText = inputText;
+    public void setYourText(String inputText){
+        this.yourText = inputText;
     }
 
     // Getter Attribute
