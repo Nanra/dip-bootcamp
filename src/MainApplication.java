@@ -1,23 +1,23 @@
-import io.TextConverter;
+import io.InputReader;
+import io.PrintOutput;
 
 public class MainApplication {
 
     public static void main(String[] args) {
 
         // Instance Object
-        TextConverter changeText = new TextConverter();
+        InputReader userInput = new InputReader();
+        PrintOutput output = new PrintOutput();
 
-        // Set Value Variable Attribute
-        changeText.setYourText("Hi, I'm A Java Programmer");
+        // Read String User Name
+        output.printString("Please Enter Your Name: ");
+        String username = userInput.readText();
 
-        // Get Value Variable Attribute
-        String yourInputText = changeText.getYourText();
+        // Read String User Age
+        output.printString("Please Enter Your Age: ");
+        String userAge = userInput.readText();
 
-        // Call Method Text Convert
-        String yourTextConverted = changeText.textToUpperCase();
-
-        // Print Output Information
-        System.out.println("Text Before Convert: " + yourInputText);
-        System.out.println("Text After Convert: " + yourTextConverted);
+        // Show User Information
+        output.printString("Hello " + username + " your Age is " + userAge +" yo");
     }
 }
